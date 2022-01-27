@@ -1,0 +1,12 @@
+:root {
+    --mainBg: mediumpurple;
+}
+
+body {
+    background-color: var(--mainBg);
+    color: snow;
+
+    h2 {
+        font-size: 68px;
+    }
+}
