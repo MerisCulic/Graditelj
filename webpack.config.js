@@ -1,26 +1,27 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
 module.exports = {
-    entry: {
-        main: path.resolve(__dirname, './src/app.js')
-    },
+    entry: [
+        './src/js/app.js',
+        './src/styles/app.scss',
+    ],
     output: {
-        filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'assets/app.js',
+        assetModuleFilename: 'images/[name][ext][query]'
     },
     devtool: 'source-map',
-    devServer: {
-        static: './dist',
-        port: 9000,
-        open: true
-    },
     plugins: [
-        new HtmlWebpackPlugin({
-            title: "Gradbeno podjetje Graditelj"
+        new CopyPlugin({
+            patterns: [
+                { from: 'src/*.html', to: '[name][ext]' }
+            ],
         }),
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin(),
+        new CleanWebpackPlugin()
     ],
     module: {
         rules: [
@@ -59,5 +60,10 @@ module.exports = {
                 type: 'asset/resource'
             }
         ]
+    },
+    devServer: {
+        static: path.join(__dirname, '/src'),
+        port: 9000,
+        open: true
     }
 }

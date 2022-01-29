@@ -1,6 +1,6 @@
 import component from "./component";
-import logo from './images/logo.webp';
-import './styles/app.scss';
+import logo from '../images/logo.png';
+import '../styles/app.scss';
 
 
 const img = document.createElement('img');
