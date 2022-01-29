@@ -1,18 +1,18 @@
 :root {
-    --mainBg: mediumpurple;
+  --main-bg: mediumpurple;
 }
 
 body {
-    background-color: var(--mainBg);
-    color: snow;
+  background-color: var(--main-bg);
+  color: snow;
 }
 
 div {
-    padding: 1rem;
-    display: flex;
-    background: linear-gradient(to top, black, white);
-    
-    h2 {
-        font-size: 68px;
-    }
+  padding: 1rem;
+  display: flex;
+  background: linear-gradient(to top, black, white);
+
+  h2 {
+    font-size: 68px;
+  }
 }
