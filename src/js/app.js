@@ -1,10 +1,8 @@
-import component from "./component";
-import logo from '../images/logo.png';
-import '../styles/app.scss';
+import fullpage from 'fullpage.js';
 
-
-const img = document.createElement('img');
-img.src = logo;
-document.body.appendChild(img)
-
-document.body.appendChild(component());
+const FullPageConfig = new fullpage('#fullpage', {
+    licenseKey: null,
+    sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', '#ccddff'],
+    scrollingSpeed: 700,
+    paddingTop: '150px'
+})
