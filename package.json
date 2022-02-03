@@ -40,6 +40,7 @@
     "webpack-dev-server": "^4.7.3"
   },
   "dependencies": {
-    "fullpage.js": "^3.1.2"
+    "fullpage.js": "^3.1.2",
+    "parallax-js": "^3.1.0"
   }
 }

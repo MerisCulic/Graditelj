@@ -59,8 +59,88 @@ header {
   }
 
   &-landing-image {
-    background-color: slategray;
+    background: rgb(103,170,255);
+    background: linear-gradient(
+      180deg, 
+      rgba(103,170,255,1) 0%, 
+      rgba(255,255,255,1) 71%
+    );
     grid-column: 3 / 8;
     grid-row: 2 / 8;
+
+    #parallax-scene {
+      height: 100%;
+      width: 100%;
+      display: grid;
+      grid-template-rows: repeat(8, 12.5%);
+      grid-template-columns: repeat(8, 12.5%);
+      overflow: hidden;
+
+      .layer {
+        &-tree {
+          z-index: 7;
+          grid-column: 0;
+          grid-row: 4 / 9;
+          height: 90%;
+          margin-left: -20%;
+        }
+
+        &-people {
+          z-index: 6;
+          grid-column: 3;
+          grid-row: 6 / 9;
+          img {
+            margin-bottom: -10%;
+          }
+        }
+
+        &-house {
+          z-index: 5;
+          grid-column: 5;
+          grid-row: 3;
+          img {
+            width: 32rem;
+            height: auto;
+          }       
+        }
+
+        &-grass {
+          z-index: 4;
+          width: 120%;
+          margin-left: -10%;
+          grid-column: 0 / 9;
+          grid-row: 5 / 10;
+        }
+
+        &-cloud2 {
+          z-index: 3;
+          grid-column: 2 / 4;
+          grid-row: 0 / 2;
+          img {
+            width: 25rem;
+          }
+        }
+
+        &-cloud1 {
+          z-index: 2;
+          grid-column: 5 / 9;
+          grid-row: 0 / 2;
+          img {
+            margin-top: -20%;
+          }
+        }
+
+        &-mountains {
+          z-index: 1;
+          grid-column: 0 / 9;
+          grid-row: 3 / 6;
+          img {
+            width: auto;
+            height: 25rem;
+            margin-left: -10%;
+          }
+        } 
+      }
+    }
   }
 }

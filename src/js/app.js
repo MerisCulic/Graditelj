@@ -1,4 +1,5 @@
 import fullpage from 'fullpage.js';
+import Parallax from 'parallax-js';
 
 const FullPageConfig = new fullpage('#fullpage', {
     licenseKey: null,
@@ -8,3 +9,8 @@ const FullPageConfig = new fullpage('#fullpage', {
     css3: true,
     scrollingSpeed: 700
 })
+
+const scene = document.getElementById('parallax-scene');
+const parallaxInstance = new Parallax(scene, {
+    relativeInput: false
+});
