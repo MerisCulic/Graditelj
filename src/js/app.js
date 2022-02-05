@@ -8,7 +8,7 @@ const FullPageConfig = new fullpage('#fullpage', {
     menu: '#fullpage',
     css3: true,
     scrollingSpeed: 700
-})
+});
 
 const scene = document.getElementById('parallax-scene');
 const parallaxInstance = new Parallax(scene, {
