@@ -111,4 +111,11 @@
         @include polygon;
       }
     }
-  }
+}
+
+.second-section {
+
+    &-navigation {
+        background-color: white;
+    }
+}

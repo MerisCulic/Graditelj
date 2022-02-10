@@ -1,5 +1,6 @@
 import fullpage from 'fullpage.js';
 import Parallax from 'parallax-js';
+import 'bootstrap';
 
 const FullPageConfig = new fullpage('#fullpage', {
     licenseKey: null,
