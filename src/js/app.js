@@ -4,8 +4,9 @@ import 'bootstrap';
 
 const FullPageConfig = new fullpage('#fullpage', {
     licenseKey: null,
-    sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', '#ccddff'],
     anchors: ['Graditelj', 'Storitve', 'thirdPage', 'fourthPage'],
+    navigation: true,
+	navigationPosition: 'left',
     css3: true,
     scrollingSpeed: 700,
     slidesNavigation: true,

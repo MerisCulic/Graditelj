@@ -10,17 +10,21 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
         <!-- FullPage.js css -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css" integrity="sha512-4rPgyv5iG0PZw8E+oRdfN/Gq+yilzt9rQ8Yci2jJ15rAyBmF0HBE4wFjBkoB72cxBeg63uobaj1UcNt/scV93w==" crossorigin="anonymous" referrerpolicy="no-referrer" />        
+        <link rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css" 
+            integrity="sha512-4rPgyv5iG0PZw8E+oRdfN/Gq+yilzt9rQ8Yci2jJ15rAyBmF0HBE4wFjBkoB72cxBeg63uobaj1UcNt/scV93w==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer" 
+        />        
 
         <link href="main.css" rel="stylesheet">
         <title>Graditelj GP</title>
     </head>
     <body>
-        <nav class="nav">
+        <!--<nav class="nav">
             <h2 class="nav-title">Meni</h2>
-            <!--<a href="index.html" class="is-active">Main</a>
-            <a href="about.html">About</a>-->
-        </nav>
+            <a href="index.html" class="is-active">Main</a>
+            <a href="about.html">About</a>
+        </nav>-->
         
         <div id="fullpage">
             <div data-menuanchor="Graditelj" class="section first-section">
@@ -45,36 +49,32 @@
                 <img src="images/pointer.png" class="first-section-pointer">
             </div>
             <div data-menuanchor="Storitve" class="section second-section">
-                <!-- KAT -izbira kategorije -->
-                <!-- 3 kategorije z onClick dodaj kat sliki in opisu display:visible, ostalim :none -->
-                <div class="second-section-navigation position-absolute bottom-0 start-50 translate-middle-x mb-4">
-                    <div class="card-group">
-                        <div class="card">
-                          <img src="./images/novog.webp" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Novogradnje</h5>
-                          </div>
-                        </div>
-                        <div class="card">
-                          <img src="./images/suho.webp" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Suhomontažerska dela</h5>
-                          </div>
-                        </div>
-                        <div class="card">
-                          <img src="./images/fasad.webp" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Fasaderstvo</h5>
-                          </div>
-                        </div>
-                      </div>
+                <div class="second-section-image">
+                </div>
+                <div class="second-section-title">
+                    Storitve
+                </div>
+                <div class="second-section-description">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat velit cum non adipisci corrupti, quaerat consequuntur earum, possimus quibusdam eveniet debitis temporibus facilis. Voluptates facere labore excepturi esse sunt aspernatur vero deserunt, sint consectetur velit cumque error maxime optio ad nobis atque dignissimos facilis libero veniam, enim illum neque? Commodi?</p>
+                </div>
+                <div class="second-section-categories">
+                    <div class="category-images">
+                        <img class="category-images-one" src="./images/faslogo.png" alt="">
+                        <img class="category-images-two" src="./images/splogo.png" alt="">
+                        <img class="category-images-three" src="./images/sglogo.png" alt="">
+                    </div>
+                    <div class="category-names">
+                        <div class="category-names-one">Splošno gradbeništvo</div>
+                        <div class="category-names-two">Stavbno pohištvo</div>
+                        <div class="category-names-three">Fasaderstvo</div>
+                    </div>
+                    
                 </div>
 
-                <!-- SLIKA kategorije -->
-                <!-- 3 različne slike, 2 z display:none -->
 
-                <!-- OPIS kategorije -->
-                <!-- 3 različne slike, 2 z display:none -->
+                
+
+                
             </div>
             <div data-menuanchor="thirdPage" class="section">
                 <div class="slide" data-anchor="slide1"> Slide 1 </div>
