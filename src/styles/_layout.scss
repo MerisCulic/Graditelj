@@ -17,6 +17,7 @@
     }
   
     &-slogan {
+      font-family: $font-rubik;
       z-index: 3;
       grid-column: 1 / 4;
       grid-row: 5 / 7;
@@ -120,15 +121,18 @@
   }
 
   &-image {
-    background-image: url('../images/fasad.webp');
-    background-size: cover;
-    background-repeat: no-repeat;
+    grid-area: 2 / 4 / 7 / 9;
     z-index: 1;
-    grid-area: 2 / 5 / 7 / 8;
+    background-image: url('../images/splosno_gradbenistvo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   
   &-title {
-    font-size: 8rem;
+    z-index: 2;
+    font-family: $font-rajdhani;
+    font-size: 5rem;
     transform: rotate(270deg);
     transform-origin: left;
     color: $color-primary;
@@ -140,6 +144,7 @@
   }
 
   &-description {
+    z-index: 3;
     grid-area: 3 / 2 / 6 / 5;
     background-color: $color-primary;
     font-size: 1.5rem;
@@ -147,23 +152,27 @@
   }
 
   &-categories {
-    z-index: 2;
+    z-index: 4;
     grid-area: 7 / 3 / 9 / 7;
     margin-bottom: 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     justify-items: center;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: black;
 
     .category-images {
-      z-index: 3;
       display: contents;
       img {
         height: 90%;
         width: auto;
         align-self: center;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+      }
+      img:hover {
+        transform: scale(1.1);
       }
       &-one {
         grid-area: 1 / 1 / 3 / 2;
@@ -177,8 +186,8 @@
     }
 
     .category-names {
-      z-index: 3;
       display: contents;
+      font-family: $font-rajdhani;
       
       &-one {
         grid-area: 3 / 1 / 4 / 2;
