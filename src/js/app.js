@@ -19,19 +19,29 @@ const parallaxInstance = new Parallax(scene, {
     relativeInput: false
 });
 
-const sg = document.getElementById('sg');
-const sp = document.getElementById('sp');
-const fas = document.getElementById('fas');
-const image = document.getElementById('services-image');
+const sg = document.getElementById('sg-icon');
+const sp = document.getElementById('sp-icon');
+const fas = document.getElementById('fas-icon');
+
+const changeCategory = (category) => {
+    const image = document.getElementById('services-image');
+    const description = document.getElementById(`${category}`);
+    const descContainer = document.getElementById('descriptions');
+    const activeDesc = descContainer.getElementsByClassName("active");
+
+    image.style.backgroundImage = `url('../images/${category}.png')`;
+    activeDesc[0].className = activeDesc[0].className.replace("active", "")
+    description.classList.add("active");
+};
 
 sg.addEventListener('click', function() {
-    image.style.backgroundImage = "url('../images/splosno_gradbenistvo.png')";
+    changeCategory('splosno-gradbenistvo');
 });
 
 sp.addEventListener('click', function() {
-    image.style.backgroundImage = "url('../images/stavbno_pohistvo.png')";
+    changeCategory('stavbno-pohistvo');
 });
 
 fas.addEventListener('click', function() {
-    image.style.backgroundImage = "url('../images/fasaderstvo.png')";
+    changeCategory('fasaderstvo');
 });
