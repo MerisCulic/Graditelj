@@ -4,7 +4,7 @@ $font-rubik: 'Rubik', sans-serif;
 $font-rajdhani: 'Rajdhani', sans-serif;
 
 // -- Colors
-$color-primary: lightblue;
+$color-primary: rgb(233, 227, 227);;
 $color-secundary: #f2f2f2;
 
 // Mixins
@@ -28,5 +28,4 @@ $color-secundary: #f2f2f2;
     position: absolute;
     left: 95%;
     top: 60%;
-    text-shadow: -5px 5px 14px rgba(0,0,0,0.2);
 }

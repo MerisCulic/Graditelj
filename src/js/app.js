@@ -3,7 +3,7 @@ import Parallax from 'parallax-js';
 
 const FullPageConfig = new fullpage('#fullpage', {
     licenseKey: null,
-    anchors: ['Graditelj', 'Storitve', 'thirdPage', 'fourthPage'],
+    anchors: ['Graditelj', 'Storitve', 'O_nas', 'Kontakt'],
     navigation: true,
 	navigationPosition: 'left',
     css3: true,
@@ -30,7 +30,7 @@ const changeCategory = (category) => {
     const activeDesc = descContainer.getElementsByClassName("active");
 
     image.style.backgroundImage = `url('../images/${category}.png')`;
-    activeDesc[0].className = activeDesc[0].className.replace("active", "")
+    activeDesc[0].className = activeDesc[0].className.replace("active", "");
     description.classList.add("active");
 };
 
