@@ -220,9 +220,10 @@
   }
 
   &-title {
-    @include section-title;
+    /*@include section-title;
     color: rgb(233, 227, 227);;
-    z-index: 5;
+    z-index: 5;*/
+    display: none;
   }
 
   &-slide {
@@ -308,21 +309,18 @@
   }
 
   &-title {
-    grid-area: 1 / 4 / 2 / 6;
-    padding: 20px;
-  }
-  &-subtitle {
-    grid-area: 2 / 4 / 3 / 6;
-    padding: 20px;
+    grid-area: 1 / 4 / 3 / 6;
+    padding: 40px;
+    h1 {
+      margin-bottom: 30px;
+    }
   }
 
   &-contact {
-    grid-row-start: 3;
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    height: fit-content;
-    width: 100vw;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
 
     &-form {
       text-align: left;
@@ -333,7 +331,7 @@
       form {
         display: flex;
         flex-direction: row;
-        margin: 10px 30px 10px 30px;
+        margin: 0 30px;
       }
 
       input {
@@ -343,10 +341,12 @@
 
       select {
         @include form-input;
+        height: 44px;
       }
 
       textarea {
         @include form-input;
+        height: fit-content;
       }
 
       button {
@@ -364,7 +364,7 @@
       }
 
       &-column-1 {
-        width: 300px;
+        width: 22rem;
         display: flex;
         flex-direction: column;
         margin-right: 30px;
@@ -376,13 +376,16 @@
       }
     }
     &-info {
-      background-color: $color-primary;
-      width: fit-content;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(100%,-50%);
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      padding-left: 15vw;
-      
+      background-color: $color-primary;
+      height: 100%;
+      width: 100%;
 
       div {
         display: flex;
@@ -403,7 +406,7 @@
     }
   }
   &-image {
-    grid-area: 6 / 3 / 9 / 8;
+    grid-area: 5 / 1 / 9 / 7;
     background-image: url('../images/building-material.png');
     background-size: 90%;
     background-repeat: no-repeat;
