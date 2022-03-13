@@ -22,7 +22,7 @@ $color-secundary: #f2f2f2;
     font-family: $font-rajdhani;
     font-size: 10rem;
     color: $color-primary;
-    opacity: 0.3;
+    opacity: 0.4;
     position: absolute;
     right: 10%;
     top: 2%;
@@ -52,4 +52,32 @@ $color-secundary: #f2f2f2;
     border: none;
     background-color: white;
     color: gray;
+}
+
+@mixin response($breakpoint) {
+    @if($breakpoint == xxl) {
+        @media(max-width: 1400px) {
+            @content;
+        }
+    }
+    @if($breakpoint == xl) {
+        @media(max-width: 1200px) {
+            @content;
+        }
+    }
+    @if($breakpoint == lg) {
+        @media(max-width: 1000px) {
+            @content;
+        }
+    }
+    @if($breakpoint == md) {
+        @media(max-width: 760px) {
+            @content;
+        }
+    }
+    @if($breakpoint == sm) {
+        @media(max-width: 560px) {
+            @content;
+        }
+    }
 }

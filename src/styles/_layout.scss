@@ -13,6 +13,11 @@
     img {
       width: 23rem;
     }
+    @include response(lg) {
+      grid-area: 2/1/3/9;
+      margin-top: 15px;
+      z-index: 20;
+    }
   }
 
   &-slogan {
@@ -21,16 +26,27 @@
     grid-area: 5 / 1 / 7 / 4;
     padding: 0 7rem 0 7rem;
     font-size: 1.3rem;
+    @include response(lg) {
+      z-index: 20;
+      grid-area: 8/2/9/8;
+      margin-top: 20px;
+    }
   }
 
   &-pointer {
     grid-area: 8 / 2 / 9 / 3;
     align-self: end;
     width: 20rem;
+    @include response(lg) {
+      display: none;
+    }
   }
 
   &-landing-image {
     grid-area: 2 / 4 / 8 / 8;
+    @include response(lg) {
+      grid-area: 2/2/8/8;
+    }
 
     #parallax-scene {
       z-index: 2;
@@ -43,50 +59,64 @@
       width: 100%;
       overflow: hidden;
       @include grid8x8;
+      
 
       .layer {
         &-tree {
-          z-index: 10;
+          z-index: 9;
           height: 125%;
-          margin: -10% 0 0 -40%;
+          margin: -10% 0 0 -50%;
+          @include response(xl) {
+            margin: -10% 0 0 -60%;
+          }
+          @include response(xl) {
+            margin-left: -200%;
+          }
         }
 
         &-people {
-          z-index: 9;
-          grid-area: 6 / 3 / 9 / 4;
-          margin-bottom: -10%;
-          width: 30rem;
-        }
-
-        &-house {
           z-index: 8;
-          grid-area: 3 / 5 / 4 / 6;
-          width: 28rem;
+          grid-area: 6 / 3 / 9 / 4;
+          margin-bottom: -20%;
+          height: 120%;
+          @include response(xl) {
+            grid-column-start: 2;
+          }
+          @include response(lg) {
+            grid-column-start: 1;
+          }
         }
 
         &-grass {
           z-index: 7;
-          grid-area: 5 / 1 / 9 / 9;
+          grid-row-start: 3;
           width: 120%;
+          height: auto;
           margin-left: -10%;
+          @include response(xl) {
+            grid-row-start: 4;
+          }
+          @include response(lg) {
+            height: 110%;
+          }
         }
 
         &-cloud2 {
           z-index: 6;
-          grid-area: 0 / 2 / 2 / 4;
+          grid-area: 1 / 2 / 2 / 4;
           width: 25rem;
         }
 
         &-cloud1 {
           z-index: 5;
-          grid-area: 0 / 5 / 2 / 9;
+          grid-area: 1 / 5 / 2 / 9;
           margin-top: -20%;
         }
 
         &-mountains {
           z-index: 4;
-          grid-area: 2 / 1 / 6 / 9;
-          height: 25rem;
+          grid-row-start: 2;
+          width: 120%;
           margin-left: -10%;
         } 
       }
@@ -111,6 +141,9 @@
     grid-area: 2 / 4 / 7 / 9;
     z-index: 1;
     @include background-image('splosno-gradbenistvo');
+    @include response(lg) {
+      grid-area: 3 / 2 / 7 / 9;
+    }
   }
   
   &-title {
@@ -137,6 +170,7 @@
     & > div {
       display: none;
     }
+
     .active {
       display: block;
     }
@@ -156,6 +190,9 @@
     justify-items: center;
     font-size: 1.5rem;
     color: black;
+    @include response(lg) {
+      grid-area: 7/2/9/8;
+    }
 
     .category-icons {
       display: contents;
@@ -166,6 +203,9 @@
         align-self: center;
         cursor: pointer;
         transition: 0.3s ease-in-out;
+        @include response(lg) {
+          height: 50%;
+        }
       }
 
       img:hover {
@@ -216,6 +256,9 @@
     @include section-title;
     z-index: 5;
     top: 10%;
+    @include response(lg) {
+      right: 2%;
+    }
   }
 
   &-slide {
@@ -224,6 +267,7 @@
       grid-area: 2 / 2 / 7 / 5;
       text-align: left;
       font-size: 1.3rem;
+      margin-left: -10%;
     }
 
     &-image {
@@ -231,12 +275,18 @@
         z-index: 3;
         grid-area: 4 / 4 / 8 / 8;
         @include background-image('tools');
+        @include response(lg) {
+          grid-area: 5/3/8/9;
+        }
       }
 
       &-2 {
         z-index: 3;
         grid-area: 4 / 4 / 8 / 8;
         @include background-image('house2');
+        @include response(lg) {
+          grid-area: 5/2/9/9;
+        }
       }
     }
 
@@ -283,6 +333,9 @@
   &-subtitle {
     grid-area: 1 / 4 / 3 / 6;
     padding: 2.5rem;
+    @include response(lg) {
+      grid-area: 2/3/4/7;
+    }
 
     h1 {
       margin-bottom: 2rem;
@@ -305,6 +358,9 @@
         display: flex;
         flex-direction: row;
         margin: 0 2rem;
+        @include response(lg) {
+          flex-direction: column;
+        }
       }
 
       input {
@@ -315,11 +371,15 @@
       select {
         @include form-input;
         height: 44px;
+        @include response(lg) {
+          margin-bottom: 1.5rem;
+        }
       }
 
       textarea {
         @include form-input;
         height: fit-content;
+        margin-bottom: 1.5rem;
       }
 
       button {
@@ -341,6 +401,9 @@
         display: flex;
         flex-direction: column;
         margin-right: 2rem;
+        @include response(lg) {
+          width: 100%;
+        }
       }
 
       &-column-2 {
@@ -359,12 +422,21 @@
       flex-direction: column;
       justify-content: space-around;
       background-color: $color-primary;
+      padding-right: 15px;
       height: 100%;
       width: 100%;
+      @include response(lg) {
+        align-items: flex-start;
+        width: auto;
+      }
 
       div {
         display: flex;
         margin: 20px;
+        @include response(lg) {
+          align-items: flex-start;
+          margin-right: 40%;
+        }
       }
 
       span {
@@ -384,5 +456,8 @@
   &-image {
     grid-area: 5 / 1 / 9 / 7;
     @include background-image('building-material', 90%);
+    @include response(lg) {
+      grid-area: 7/1/9/9;
+    }
   }
 }
