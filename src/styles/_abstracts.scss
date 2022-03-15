@@ -24,9 +24,12 @@ $color-secundary: #f2f2f2;
     color: $color-primary;
     opacity: 0.4;
     position: absolute;
-    right: 10%;
+    right: 5%;
     top: 2%;
     z-index: -1;
+    @include response(sm) {
+        font-size: 7rem;
+    }
 }
 
 @mixin background-image ($image-name, $background-size: contain) {
@@ -52,6 +55,9 @@ $color-secundary: #f2f2f2;
     border: none;
     background-color: white;
     color: gray;
+    @include response(sm) {
+        height: auto;
+    }
 }
 
 @mixin response($breakpoint) {
@@ -66,12 +72,12 @@ $color-secundary: #f2f2f2;
         }
     }
     @if($breakpoint == lg) {
-        @media(max-width: 1000px) {
+        @media(max-width: 1024px) {
             @content;
         }
     }
     @if($breakpoint == md) {
-        @media(max-width: 760px) {
+        @media(max-width: 768px) {
             @content;
         }
     }

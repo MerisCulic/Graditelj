@@ -12,8 +12,11 @@
     grid-area: 3 / 1 / 5 / 4;
     img {
       width: 23rem;
+      @include response(lg) {
+        width: 18rem;
+      }
     }
-    @include response(lg) {
+    @include response(md) {
       grid-area: 2/1/3/9;
       margin-top: 15px;
       z-index: 20;
@@ -25,11 +28,11 @@
     z-index: 2;
     grid-area: 5 / 1 / 7 / 4;
     padding: 0 7rem 0 7rem;
-    font-size: 1.3rem;
-    @include response(lg) {
+    font-size: 1rem;
+    @include response(md) {
       z-index: 20;
       grid-area: 8/2/9/8;
-      margin-top: 20px;
+      margin-top: 1rem;
     }
   }
 
@@ -44,7 +47,7 @@
 
   &-landing-image {
     grid-area: 2 / 4 / 8 / 8;
-    @include response(lg) {
+    @include response(md) {
       grid-area: 2/2/8/8;
     }
 
@@ -103,13 +106,14 @@
 
         &-cloud2 {
           z-index: 6;
-          grid-area: 1 / 2 / 2 / 4;
+          grid-area: 1 / 1 / 2 / 4;
           width: 25rem;
         }
 
         &-cloud1 {
           z-index: 5;
           grid-area: 1 / 5 / 2 / 9;
+          width: 100%;
           margin-top: -20%;
         }
 
@@ -142,7 +146,10 @@
     z-index: 1;
     @include background-image('splosno-gradbenistvo');
     @include response(lg) {
-      grid-area: 3 / 2 / 7 / 9;
+      grid-area: 3 / 4 / 7 / 9;
+    }
+    @include response(sm) {
+      grid-area: 4 / 3 / 7 / 9;
     }
   }
   
@@ -157,6 +164,9 @@
     grid-area: 2 / 2 / 6 / 5;
     font-size: 1.2rem;
     padding: 1rem;
+    @include response(sm) {
+      grid-area: 2/2/6/6;
+    }
 
     &-title {
       font-size: 1.6rem;
@@ -198,7 +208,7 @@
       display: contents;
 
       img {
-        height: 90%;
+        height: 60%;
         width: auto;
         align-self: center;
         cursor: pointer;
@@ -232,16 +242,25 @@
       &-one {
         grid-area: 3 / 1 / 4 / 2;
         align-self: center;
+        @include response(sm) {
+          width: 60%;
+        }
       }
 
       &-two {
         grid-area: 3 / 2 / 4 / 3;
         align-self: center;
+        @include response(sm) {
+          width: 60%;
+        }
       }
 
       &-three {
         grid-area: 3 / 3 / 4 / 4;
         align-self: center;
+        @include response(sm) {
+          width: 60%;
+        }
       }
     }
   }
@@ -334,7 +353,12 @@
     grid-area: 1 / 4 / 3 / 6;
     padding: 2.5rem;
     @include response(lg) {
-      grid-area: 2/3/4/7;
+      grid-area: 1/2/3/8;
+      padding: 1.5rem;
+    }
+    @include response(sm) {
+      grid-area: 1/1/2/9;
+      padding: 1rem;
     }
 
     h1 {
@@ -347,6 +371,15 @@
     top: 50%;
     right: 50%;
     transform: translate(50%,-50%);
+    @include response(lg) {
+      transform: translate(30%, -50%);
+    }
+    @include response(md) {
+      transform: translate(40%, -50%);
+    }
+    @include response(sm) {
+      transform: translate(50%, -50%);
+    }
 
     &-form {
       text-align: left;
@@ -358,7 +391,7 @@
         display: flex;
         flex-direction: row;
         margin: 0 2rem;
-        @include response(lg) {
+        @include response(md) {
           flex-direction: column;
         }
       }
@@ -371,7 +404,7 @@
       select {
         @include form-input;
         height: 44px;
-        @include response(lg) {
+        @include response(md) {
           margin-bottom: 1.5rem;
         }
       }
@@ -403,6 +436,9 @@
         margin-right: 2rem;
         @include response(lg) {
           width: 100%;
+        }
+        @include response(sm) {
+          width: auto;
         }
       }
 
@@ -442,6 +478,7 @@
       span {
         align-self: center;
         margin-left: 1.5rem;
+        text-align: left;
       }
 
       img {
