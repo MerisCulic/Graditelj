@@ -14,3 +14,9 @@
     }
 }
 
+/* section navigation */
+#fp-nav.fp-left {
+  @media(max-width: 400px) {
+    display: none;
+  }
+}
