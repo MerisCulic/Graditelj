@@ -15,29 +15,23 @@
             integrity="sha512-4rPgyv5iG0PZw8E+oRdfN/Gq+yilzt9rQ8Yci2jJ15rAyBmF0HBE4wFjBkoB72cxBeg63uobaj1UcNt/scV93w==" 
             crossorigin="anonymous" referrerpolicy="no-referrer" 
         />        
-        <!-- AOS CDN -->
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link href="main.css" rel="stylesheet">
         <title>Graditelj GP</title>
     </head>
     <body>
-        <!--<nav class="nav">
-            <h2 class="nav-title">Meni</h2>
-            <a href="index.html" class="is-active">Main</a>
-        </nav>-->
         
         <div id="fullpage">
             <div data-menuanchor="Graditelj" class="section first-section">
-                <div  data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" class="first-section-logo">
+                <div class="first-section-logo">
                     <img src="./images/logo.avif" alt="graditelj-logo">
                 </div>
-                <div class="first-section-slogan" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400" >
+                <div class="first-section-slogan" >
                     <h2>Uresničujemo vaše nepremičninske sanje od leta 1999.</h2>
                 </div>
-                <div  data-aos="zoom-in-left" data-aos-duration="1000" data-aos-delay="600" class="first-section-landing-image">
+                <div class="first-section-landing-image">
                     <div id="parallax-scene">
                         <img src="images/people.avif" class="layer-people" data-depth="0.5">
-                        <img src="images/grass&house.avif" class="layer-grass" data-depth="0.3">
+                        <img src="images/field&house.avif" class="layer-field" data-depth="0.3">
                         <img src="images/mountains.avif" class="layer-mountains" data-depth="0.05">
                         <img src="images/cloud1.avif" class="layer-cloud1" data-depth="0.2">
                         <img src="images/cloud2.avif" class="layer-cloud2" data-depth="0.4">
@@ -45,7 +39,7 @@
                     </div>
                     <div class="first-section-landing-image-background"></div>
                 </div>
-                <!--<img src="images/pointer.avif" class="first-section-pointer">-->
+                <img src="images/pointer.avif" class="first-section-pointer">
             </div>
             <div data-menuanchor="Storitve" class="section second-section">
                 <div id="services-image" class="second-section-image">
@@ -177,9 +171,5 @@
         </div>
 
         <script src="assets/app.js"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
     </body>
 </html>

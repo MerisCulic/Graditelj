@@ -29,7 +29,7 @@ const changeCategory = (category) => {
     const descContainer = document.getElementById('descriptions');
     const activeDesc = descContainer.getElementsByClassName("active");
 
-    image.style.backgroundImage = `url('../images/${category}.png')`;
+    image.style.backgroundImage = `url('../images/${category}.avif')`;
     activeDesc[0].className = activeDesc[0].className.replace("active", "");
     description.classList.add("active");
 };
