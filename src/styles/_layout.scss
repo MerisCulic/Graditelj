@@ -429,11 +429,6 @@
         }
       }
 
-      input {
-        @include form-input;
-        margin-bottom: 1.5rem;
-      }
-
       select {
         @include form-input;
         height: 44px;
@@ -469,6 +464,11 @@
         display: flex;
         flex-direction: column;
         margin-right: 2rem;
+
+        input {
+          @include form-input;
+          margin-bottom: 1.5rem;
+        }
         @include response(lg) {
           width: 100%;
         }
@@ -482,6 +482,33 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        .gdpr {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          height: 30px;
+          margin-bottom: 1rem;
+          @include response(sm) {
+            font-size: 1.5rem;
+          }
+
+          #gdpr-check {
+            height: 20px;
+            width: 20px;
+            margin-right: 10px;
+            @include response(sm) {
+              height: 12px;
+              width: 12px;
+            }
+          }
+
+          a {
+            color: initial;
+            text-decoration: none;
+          }
+        }
       }
     }
 
@@ -537,6 +564,35 @@
     @include background-image('building-material', 90%);
     @include response(lg) {
       grid-area: 7/1/9/9;
+    }
+  }
+}
+
+.privacy-policy-page {
+  text-align: left;
+  margin: 2rem 10rem 5rem 10rem;
+
+  &-title {
+    margin-bottom: 2rem;
+  }
+  &-content {
+    p {
+      line-height: 2;
+      margin-bottom: 1rem;
+
+      strong {
+        padding-left: 0.7rem;
+      }
+    }
+
+    h3, h2 {
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    ul {
+      list-style: circle inside none;
+      margin: 1rem;
     }
   }
 }
