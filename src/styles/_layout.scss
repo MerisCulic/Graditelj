@@ -350,6 +350,9 @@
         z-index: 3;
         grid-area: 4 / 2 / 7 / 4;
         @include background-image('team', 50%);
+        @include response(sm) {
+          grid-area: 3/6/4/9;
+        }
       }
     }
 
@@ -594,5 +597,87 @@
       list-style: circle inside none;
       margin: 1rem;
     }
+  }
+}
+
+.menu { 
+
+  #menu-bar {
+    z-index: 1001;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    width: 90px;
+    height: 50px;
+    cursor: pointer;
+
+    .bar {
+      height: 10px;
+      width: 100%;
+      background-color: $color-primary;
+      display: block;
+      border-radius: 5px 0 0 5px;
+      margin-bottom: 10px;
+      transition: 0.3s ease;
+    }
+
+    #bar2 {
+      transform: translateX(10%);
+    }
+    
+    #bar3 {
+      transform: translateX(20%);
+    }
+  }
+
+  
+
+  .nav {
+    position: absolute;
+    z-index: 1000;
+    width: 100vw;
+    height: 0;
+    background-color: $color-primary;
+    transition: 0.3s ease;
+    
+  
+    &-links {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    &-list {
+      display: none;
+      list-style-type: none;
+      text-align: center;
+
+      & .active {
+        display: block;
+      }
+    }
+  
+    &-link {
+      text-decoration: none;
+      color: $color-terciary;
+      line-height: 9rem;
+      font-size: 7rem;
+      transition: all .3s;
+  
+      &:hover {
+        color: lighten($color-terciary, 40%);
+        font-size: 8rem;
+      }
+    }
+  }
+
+  .active {
+    height: 100%;
+  }
+
+  & .nav-list .active {
+    display: block;
   }
 }

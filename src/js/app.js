@@ -45,3 +45,16 @@ sp.addEventListener('click', function() {
 fas.addEventListener('click', function() {
     changeCategory('fasaderstvo');
 });
+
+const nav = document.getElementById("nav");
+const menu = document.getElementById("menu-bar");
+const list = document.getElementsByClassName("nav-list");
+
+const menuOnClick = () => {
+    nav.classList.toggle("active");
+    list[0].classList.toggle("active");
+}
+
+menu.addEventListener('click', function() {
+    menuOnClick()
+});
