@@ -1,6 +1,7 @@
 import fullpage from 'fullpage.js';
 import Parallax from 'parallax-js';
 
+// FullPage.js
 const FullPageConfig = new fullpage('#fullpage', {
     licenseKey: null,
     anchors: ['Graditelj', 'Storitve', 'O_nas', 'Kontakt'],
@@ -14,11 +15,13 @@ const FullPageConfig = new fullpage('#fullpage', {
     keyboardScrolling: true
 });
 
+// Parallax.js
 const scene = document.getElementById('parallax-scene');
 const parallaxInstance = new Parallax(scene, {
     relativeInput: false
 });
 
+// Services category selection functionality
 const sg = document.getElementById('sg-icon');
 const sp = document.getElementById('sp-icon');
 const fas = document.getElementById('fas-icon');
@@ -46,9 +49,11 @@ fas.addEventListener('click', function() {
     changeCategory('fasaderstvo');
 });
 
+// Navigation menu functionality
 const nav = document.getElementById("nav");
 const menu = document.getElementById("menu-bar");
 const list = document.getElementsByClassName("nav-list");
+const navLinks = document.getElementsByClassName("nav-link");
 
 const menuOnClick = () => {
     nav.classList.toggle("active");
@@ -58,3 +63,9 @@ const menuOnClick = () => {
 menu.addEventListener('click', function() {
     menuOnClick()
 });
+
+for(let i=0; i<navLinks.length; i++) {
+    navLinks[i].addEventListener('click', function() {
+        menuOnClick();
+    })
+}
