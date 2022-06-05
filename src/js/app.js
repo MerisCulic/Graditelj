@@ -32,7 +32,7 @@ const changeCategory = (category) => {
     const descContainer = document.getElementById('descriptions');
     const activeDesc = descContainer.getElementsByClassName("active");
 
-    image.style.backgroundImage = `url('../images/${category}.avif')`;
+    image.style.backgroundImage = `url('../images/${category}.webp')`;
     activeDesc[0].className = activeDesc[0].className.replace("active", "");
     description.classList.add("active");
 };
@@ -58,6 +58,7 @@ const navLinks = document.getElementsByClassName("nav-link");
 const menuOnClick = () => {
     nav.classList.toggle("active");
     list[0].classList.toggle("active");
+    menu.classList.toggle("active");
 }
 
 menu.addEventListener('click', function() {
