@@ -350,6 +350,9 @@
         z-index: 3;
         grid-area: 4 / 2 / 7 / 4;
         @include background-image('team', 50%);
+        @include response(sm) {
+          grid-area: 3/6/4/9;
+        }
       }
     }
 
@@ -593,6 +596,85 @@
     ul {
       list-style: circle inside none;
       margin: 1rem;
+    }
+  }
+}
+
+.menu { 
+  #menu-bar {
+    z-index: 1001;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    width: 60px;
+    height: 50px;
+    cursor: pointer;
+
+    .bar {
+      height: 8px;
+      width: 100%;
+      background-color: $color-primary;
+      display: block;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      transition: 0.3s ease;
+    }
+
+    &.active {
+      #bar1 {
+        transform: rotate(-45deg);
+        margin-top: 21px;
+      }
+      #bar3 {
+        opacity: 0;
+      }
+      #bar2 {
+        transform: rotate(45deg);
+        margin-top: -16px;
+      }
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 1000;
+    width: 100vw;
+    height: 0;
+    background-color: white;
+    transition: 0.7s ease;
+
+    &.active {
+      height: 100%;
+    }
+  
+    &-list {
+      width: 100%;
+      display: none;
+      list-style-type: none;
+      text-align: center;
+      animation: fadeIn 1s forwards;
+
+      &.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  
+    &-link {
+      text-decoration: none;
+      color: $color-terciary;
+      line-height: 9rem;
+      font-size: 7rem;
+      transition: all .3s;
+  
+      &:hover {
+        color: lighten($color-terciary, 40%);
+        font-size: 8rem;
+      }
     }
   }
 }

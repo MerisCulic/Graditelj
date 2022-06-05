@@ -6,6 +6,7 @@ $font-rajdhani: 'Rajdhani', sans-serif;
 // -- Colors
 $color-primary: rgb(233, 227, 227);;
 $color-secundary: #f2f2f2;
+$color-terciary: rgb(34, 34, 34);
 
 // Mixins
 @mixin response($breakpoint) {
@@ -49,13 +50,19 @@ $color-secundary: #f2f2f2;
 
 @mixin polygon {
     clip-path: polygon(15% 0%,100% 0%,100% 85%,85% 100%,0% 100%,0% 15%);
-}
+} 
 
 @mixin background-image ($image-name, $background-size: contain) {
-    background-image: url("../images/#{$image-name}.avif");
+    background-image: url("../images/#{$image-name}.webp");
     background-size: $background-size;
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
     height: 100%;
 }
+
+// Animations
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+} 
