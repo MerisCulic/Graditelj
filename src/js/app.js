@@ -4,7 +4,7 @@ import Parallax from 'parallax-js';
 // FullPage.js
 const FullPageConfig = new fullpage('#fullpage', {
     licenseKey: null,
-    anchors: ['Graditelj', 'Storitve', 'O_nas', 'Kontakt'],
+    anchors: ['Graditelj', 'Storitve', 'O_nas', 'Kontakt', 'Footer'],
     navigation: true,
 	navigationPosition: 'left',
     css3: true,
