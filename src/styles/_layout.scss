@@ -528,47 +528,42 @@
 .footer {
   .fp-tableCell {
     display: grid;
-    grid-template-rows: 3rem repeat(3, 1fr) 3rem;
+    grid-template-rows: 3rem repeat(3, 1fr) 5rem;
     grid-template-columns: 7rem repeat(3, 1fr) 7rem;
-    grid-gap: 2rem;
   }
 
-  background-color: lightblue;
-
-  &-logo {
-    grid-area: 2/2/3/3;
-    @include background-image('logo', 50%);
+  &-map {
+    grid-area: 1/2/4/5;
+    margin-top: 1rem;
+    width: 100%;
+    height: 100%;
   }
 
   &-desc {
-    grid-area: 3/2/4/3;
+    grid-area: 4/2/5/3;
     place-self: center;
     font-size: larger;
     text-align: justify;
+    padding: 1rem;
   }
 
   &-nav {
     display: contents;
-    &-title {
-      grid-area: 2/3/3/4;
-      font-size: larger;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-bottom: 2px solid black;
+    padding: 1rem;
 
-      & h3 {
-        text-transform: uppercase;
-        letter-spacing: 7px;
-      }
-    }
     &-links {
-      grid-area: 3/3/4/4;
+      grid-area: 4/3/5/4;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       font-size: larger;
-      font-weight: 500;
+      font-weight: 300;
+      padding: 1rem;
+
+      & h3 {
+        @include footer-heading;
+        border-bottom: 1px solid black;
+      }
 
       & a {
         text-decoration: none;
@@ -584,13 +579,16 @@
   }
 
   &-contact-info {
-    grid-area: 2/4/4/5;
+    grid-area: 1/4/4/5;
+    background-color: rgba(255, 255, 255, 0.8);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding-right: 15px;
+    width: fit-content;
+    margin-top: 1rem;
     height: 100%;
-    width: 100%;
+    z-index: 2;
+
     @include response(lg) {
       align-items: flex-start;
       width: auto;
@@ -601,9 +599,16 @@
     @include response(sm) {
       display: none;
     }
+
+    & .logo {
+      @include background-image('logo', 70%);
+      height: 10rem;
+      width: auto;
+    }
+
     div {
       display: flex;
-      margin: 20px;
+      margin: 2rem;
       @include response(lg) {
         align-items: flex-start;
         margin-right: 40%;
@@ -622,6 +627,39 @@
       background-color: white;
       border-radius: 100%;
     }
+  }
+
+  &-working-hours {
+    grid-area: 4/4/5/5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: larger;
+    font-weight: 300;
+    line-height: 3rem;
+    padding: 1rem;
+
+    & h3 {
+      @include footer-heading;
+    }
+  }
+
+  &-rights {
+    grid-area: 5/1/6/6;
+    background-color: rgb(62, 83, 83);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    & p {
+      color: white;
+    }
+  }
+
+  &-bg {
+    background-color: $color-primary;
+    grid-area: 3/1/6/6;
+    z-index: -1;
   }
 }
 
