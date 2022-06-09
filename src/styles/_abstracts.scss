@@ -52,11 +52,12 @@ $color-terciary: rgb(34, 34, 34);
     clip-path: polygon(15% 0%,100% 0%,100% 85%,85% 100%,0% 100%,0% 15%);
 } 
 
-@mixin background-image ($image-name, $background-size: contain) {
+@mixin background-image ($image-name, $background-size: contain, $opacity: 1) {
     background-image: url("../images/#{$image-name}.webp");
     background-size: $background-size;
     background-repeat: no-repeat;
     background-position: center;
+    opacity: $opacity;
     width: 100%;
     height: 100%;
 }
