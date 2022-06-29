@@ -52,12 +52,11 @@ $color-terciary: rgb(34, 34, 34);
     clip-path: polygon(15% 0%,100% 0%,100% 85%,85% 100%,0% 100%,0% 15%);
 } 
 
-@mixin background-image ($image-name, $background-size: contain, $opacity: 1) {
+@mixin background-image ($image-name, $background-size: contain) {
     background-image: url("../images/#{$image-name}.webp");
     background-size: $background-size;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: $opacity;
     width: 100%;
     height: 100%;
 }
@@ -75,4 +74,12 @@ $color-terciary: rgb(34, 34, 34);
 @keyframes fadeIn {
     0% {opacity: 0;}
     100% {opacity: 1;}
-} 
+}
+
+@keyframes tiltUp {
+    50% {transform: rotate(10deg)}
+}
+
+@keyframes tiltDown {
+    50% {transform: rotate(-10deg)}
+}

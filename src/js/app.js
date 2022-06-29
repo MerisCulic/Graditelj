@@ -12,7 +12,33 @@ const FullPageConfig = new fullpage('#fullpage', {
     slidesNavigation: true,
 	slidesNavPosition: 'bottom',
     controlArrows: false,
-    keyboardScrolling: true
+    keyboardScrolling: true,
+    onLeave: function(origin, destination, direction, trigger){
+
+        // Hamburger animation on scroll
+        let bars = document.getElementsByClassName("bar");
+        
+        function triggerAnim(el, anim) {
+            el.style.animation = anim + " 0.7s ease-in-out",
+            el.style.transformOrigin = "right",
+            setTimeout(function() {
+                el.style.animation = "none",
+                el.style.transformOrigin = "initial"
+            }, 700);
+        };
+
+		if(direction == "down"){
+            for(let bar of bars){
+                triggerAnim(bar, "tiltUp")
+            };
+		}
+
+		else if(direction == "up"){
+            for(let bar of bars){
+                triggerAnim(bar, "tiltDown")
+            };
+		}    
+	}
 });
 
 // Parallax.js
